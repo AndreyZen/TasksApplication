@@ -1,0 +1,19 @@
+﻿<Application x:Class="TasksApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TasksApplication"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Border" x:Key="BrdStyle">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <SolidColorBrush Color="Gray" Opacity="0.7"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+    </Application.Resources>
+</Application>
