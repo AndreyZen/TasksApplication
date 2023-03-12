@@ -18,7 +18,7 @@
         <ComboBox  FontSize="16" SelectedIndex="0" Padding="10 5" Margin="10 5" SelectionChanged="CbPages_SelectionChanged" x:Name="CbPages">
             <ComboBoxItem Content="Линейные алгоритмы"/>
             <ComboBoxItem Content="Разветвленные алгоритмы"/>
-            <ComboBoxItem Content="Разветвленныцйуцйуцйуцйуйцуе алгоритмы"/>
+            <ComboBoxItem Content="Циклические алгоритмы"/>
         </ComboBox>
 
 

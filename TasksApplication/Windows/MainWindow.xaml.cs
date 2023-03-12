@@ -27,7 +27,7 @@ namespace TasksApplication
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void CbPages_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -39,6 +39,9 @@ namespace TasksApplication
                     break;
                 case 1:
                     MainFrame.Navigate(new Pages.BranchedAlgorithms());
+                    break;
+                case 2:
+                    MainFrame.Navigate(new Pages.CyclicAlgorithms());
                     break;
                 default:
                     break;
