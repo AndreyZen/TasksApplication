@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TasksApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <ComboBox/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1"/>
+
+        <TextBlock Text="©AndreyZen :)" Grid.Row="2" HorizontalAlignment="Right" Margin="10 5"/>
+
     </Grid>
 </Window>

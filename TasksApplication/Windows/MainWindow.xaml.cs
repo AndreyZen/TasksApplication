@@ -23,8 +23,11 @@ namespace TasksApplication
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Pages.LinearAlgorithms());
+        }
     }
 }

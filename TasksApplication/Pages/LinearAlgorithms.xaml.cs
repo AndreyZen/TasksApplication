@@ -27,12 +27,34 @@ namespace TasksApplication.Pages
 
         private void TbValue_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (int.TryParse((sender as TextBox).Text, out int x))
+            if (long.TryParse(TbValueX.Text, out long x))
             {
-
+                TbRnF.Text = Math.Pow((x + Math.Log(x)), 1.0 / 3.0).ToString();
+                if (long.TryParse(TbValueY.Text, out long y))
+                    TbRnG.Text = Math.Abs(Math.Pow(y, 5) - x + Math.Sin(Math.Pow(x, 2))).ToString();
+                else
+                    TbRnG.Text = "0";
             }
             else
-                MessageBox.Show("Неверное значение X");
+            {
+                TbRnG.Text = "0";
+                TbRnF.Text = "0";
+            }
+        }
+
+        private void TbValueSum_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(int.TryParse(TbValueSum.Text, out int x))
+            {
+                double sum = ((x / 100) + (x % 100 / 10) + (x % 10)) / 3.0; 
+                TbRnFullValue.Text = sum.ToString();
+                TbRn.Text = ((int)(sum * 100 % 10)).ToString();
+            }
+            else
+            {
+                TbRnFullValue.Text = "0";
+                TbRn.Text = "0";
+            }
         }
     }
 }
