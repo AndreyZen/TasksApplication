@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TasksApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Лабораторные работы" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
-        <StackPanel Orientation="Horizontal">
-            <ComboBox/>
-        </StackPanel>
+        <ComboBox  FontSize="16" SelectedIndex="0" Padding="10 5" Margin="10 5" SelectionChanged="CbPages_SelectionChanged" x:Name="CbPages">
+            <ComboBoxItem Content="Линейные алгоритмы"/>
+            <ComboBoxItem Content="Разветвленные алгоритмы"/>
+            <ComboBoxItem Content="Разветвленныцйуцйуцйуцйуйцуе алгоритмы"/>
+        </ComboBox>
 
-        <Frame x:Name="MainFrame" Grid.Row="1"/>
 
         <TextBlock Text="©AndreyZen :)" Grid.Row="2" HorizontalAlignment="Right" Margin="10 5"/>
 

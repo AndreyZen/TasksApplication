@@ -27,7 +27,22 @@ namespace TasksApplication
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Pages.LinearAlgorithms());
+            
+        }
+
+        private void CbPages_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (CbPages.SelectedIndex)
+            {
+                case 0:
+                    MainFrame.Navigate(new Pages.LinearAlgorithms());
+                    break;
+                case 1:
+                    MainFrame.Navigate(new Pages.BranchedAlgorithms());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
