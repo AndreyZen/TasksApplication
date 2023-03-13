@@ -43,6 +43,9 @@ namespace TasksApplication
                 case 2:
                     MainFrame.Navigate(new Pages.CyclicAlgorithms());
                     break;
+                case 3:
+                    MainFrame.Navigate(new Pages.ArrayPage());
+                    break;
                 default:
                     break;
             }
