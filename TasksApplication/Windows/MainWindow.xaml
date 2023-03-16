@@ -20,6 +20,7 @@
             <ComboBoxItem Content="Разветвленные алгоритмы"/>
             <ComboBoxItem Content="Циклические алгоритмы"/>
             <ComboBoxItem Content="Одномерые массивы"/>
+            <ComboBoxItem Content="Двумерные массивы"/>
         </ComboBox>
 
 
