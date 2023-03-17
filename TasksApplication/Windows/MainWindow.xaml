@@ -6,14 +6,21 @@
         xmlns:local="clr-namespace:TasksApplication"
         mc:Ignorable="d"
         Title="Лабораторные работы" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="..\Resources\Back.jpg"/>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </ScrollViewer>
 
         <ComboBox  FontSize="16" SelectedIndex="0" Padding="10 5" Margin="10 5" SelectionChanged="CbPages_SelectionChanged" x:Name="CbPages">
             <ComboBoxItem Content="Линейные алгоритмы"/>
@@ -21,6 +28,7 @@
             <ComboBoxItem Content="Циклические алгоритмы"/>
             <ComboBoxItem Content="Одномерые массивы"/>
             <ComboBoxItem Content="Двумерные массивы"/>
+            <ComboBoxItem Content="Сопрограммы"/>
         </ComboBox>
 
 

@@ -49,6 +49,9 @@ namespace TasksApplication
                 case 4:
                     MainFrame.Navigate(new Pages.MultiArrPage());
                     break;
+                case 5:
+                    MainFrame.Navigate(new Pages.SubprogrammPage());
+                    break;
                 default:
                     break;
             }

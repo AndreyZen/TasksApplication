@@ -1,0 +1,38 @@
+﻿<Page x:Class="TasksApplication.Pages.SubprogrammPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TasksApplication.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SubprogrammPage" FontSize="16">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Style="{StaticResource BrdStyle}">
+            <StackPanel Orientation="Vertical" >
+                <TextBlock Text="Задачи первого уровня сложности" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="Введите массив для фильтрации" Margin="0 10 0 0"/>
+                <TextBox x:Name="TbArrValue" />
+                <Button x:Name="BtnSort" Content="Сортировать" Margin="0 10" Click="BtnSort_Click"/>
+                <TextBlock Margin="0 10" x:Name="TbSortArr"/>
+            </StackPanel>
+        </Border>
+
+        <Border Style="{StaticResource BrdStyle}" Grid.Column="1">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Style="{StaticResource TbHeader}" Text="Задачи второго уровня сложности" HorizontalAlignment="Center"/>
+                <TextBlock Text="Расчет формул" TextWrapping="Wrap" Margin="0 10 0 0"/>
+                <Image Source="..\Resources\FormulImg.png"/>
+                <Button Content="Расчитать" x:Name="BtnCalculation" Click="BtnCalculation_Click"/>
+                <TextBlock Margin="0 10" TextWrapping="Wrap" x:Name="TbNumbersY"/>
+                <TextBlock Margin="0 10" TextWrapping="Wrap" x:Name="TbNumbersS"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

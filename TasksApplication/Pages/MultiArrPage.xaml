@@ -20,7 +20,9 @@
                 <TextBlock Text="Введите массив или сгенерируйте вещественную матрицу 5 порядка" TextWrapping="Wrap" Margin="0 10 0 0"/>
                 <DockPanel HorizontalAlignment="Stretch">
                     <Button Content="Сгенерировать" DockPanel.Dock="Right" Padding="10 0" x:Name="BtnMatrixGenerate" Click="BtnMatrixGenerate_Click" VerticalAlignment="Center"/>
-                    <TextBox x:Name="TbMatrix" DockPanel.Dock="Right" Margin=" 0 0 10 0" MinHeight="100"/>
+                    <Border DockPanel.Dock="Right" Margin=" 0 0 10 0" MinHeight="100" BorderBrush="Black" BorderThickness="1 0 1 0" Padding="5">
+                        <TextBlock x:Name="TbMatrix" />
+                    </Border>
                 </DockPanel>
                 <Button x:Name="BtnCalculate" Click="BtnCalculate_Click" Content="Рассчитать" Margin="0 10"/>
                 <TextBlock x:Name="TbResult"/>
@@ -35,11 +37,13 @@
                 <TextBlock Margin="0 10 0 0" TextWrapping="Wrap" Text="Введите m - количество столбцов"/>
                 <TextBox x:Name="TbValueM"/>
                 <Button Margin="0 10" Content="Сгенерировать" x:Name="BtnNewMatrix" Click="BtnNewMatrix_Click"/>
-                <Border BorderBrush="Black" BorderThickness="1 0 1 0" Padding="5">
-                <TextBlock x:Name="TbMatrixNM"/>
+                <Border BorderBrush="Black" x:Name="BrdGrid" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1 0 1 0" Padding="5" Visibility="Collapsed">
+                    <TextBlock x:Name="TbMatrixNM" />
                 </Border>
                 <Button x:Name="BtnCalculateSecond" Click="BtnCalculateSecond_Click" Content="Рассчитать" Margin="0 10"/>
-                <TextBlock x:Name="TbResultMNMatrix"/>
+                <Border BorderBrush="Black" HorizontalAlignment="Center" BorderThickness="1 0 1 0" Padding="5" Visibility="{Binding ElementName=BrdGrid, Path=Visibility}">
+                    <TextBlock x:Name="TbResultMNMatrix"/>
+                </Border>
             </StackPanel>
         </Border>
     </Grid>
