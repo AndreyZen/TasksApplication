@@ -40,12 +40,12 @@ namespace TasksApplication.Pages
             }
         }
 
-        private string TernaryNumberCounter(int n)
+        private string TernaryNumberCounter(int value)
         {
-            if ((n / 3) == 0)
-                return (n % 3).ToString();
+            if ((value / 3) == 0)
+                return (value % 3).ToString();
 
-            return (n % 3).ToString() + TernaryNumberCounter((n / 3));
+            return (value % 3).ToString() + TernaryNumberCounter((value / 3));
         }
 
         private void TbValueX_TextChanged(object sender, TextChangedEventArgs e)
