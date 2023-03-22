@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TasksApplication.Pages
 {
@@ -98,6 +87,10 @@ namespace TasksApplication.Pages
             {
                 int[] arr = new int[n];
                 string[] arrStr = str.Split(' ');
+
+                if (arrStr.Length != n)
+                    return null;
+
                 for (int i = 0; i < arrStr.Length; i++)
                 {
                     if (int.TryParse(arrStr[i], out int d))

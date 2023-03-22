@@ -17,13 +17,11 @@
         <Border Style="{StaticResource BrdStyle}">
             <StackPanel Orientation="Vertical" >
                 <TextBlock Text="Задачи первого уровня сложности" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
-                <TextBlock Text="Введите массив или сгенерируйте вещественную матрицу 5 порядка" TextWrapping="Wrap" Margin="0 10 0 0"/>
-                <DockPanel HorizontalAlignment="Stretch">
-                    <Button Content="Сгенерировать" DockPanel.Dock="Right" Padding="10 0" x:Name="BtnMatrixGenerate" Click="BtnMatrixGenerate_Click" VerticalAlignment="Center"/>
-                    <Border DockPanel.Dock="Right" Margin=" 0 0 10 0" MinHeight="100" BorderBrush="Black" BorderThickness="1 0 1 0" Padding="5">
+                <TextBlock Text="Cгенерируйте вещественную матрицу 5 порядка" TextWrapping="Wrap" Margin="0 10 0 0"/>
+                    <Button Content="Сгенерировать" Padding="10 0" x:Name="BtnMatrixGenerate" Click="BtnMatrixGenerate_Click" VerticalAlignment="Center"/>
+                    <Border HorizontalAlignment="Center" Margin=" 0 0 10 0" MinHeight="100" BorderBrush="Black" BorderThickness="1 0 1 0" Padding="5">
                         <TextBlock x:Name="TbMatrix" />
                     </Border>
-                </DockPanel>
                 <Button x:Name="BtnCalculate" Click="BtnCalculate_Click" Content="Рассчитать" Margin="0 10"/>
                 <TextBlock x:Name="TbResult"/>
             </StackPanel>
